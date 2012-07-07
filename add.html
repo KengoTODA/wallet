@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta name="author" content="eller86">
+		<title>wallet mockup</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
+	</head>
+	<body>
+		<div id="home" data-role="page">
+			<div data-role="header">
+				<h1>add expenses</h1>
+			</div>
+			<div data-role="content">
+				<form id="add-form">
+					<label for="select-type" class="select">type:</label>
+					<select name="select-type" id="select-type">
+						<option value="food">Food</option>
+						<option value="transport">Transport</option>
+						<option value="goods">Goods</option>
+					</select>
+					<label for="price">price:</label>
+					<input type="number" id="price" name="price">
+					<label for="memo">memo:</label>
+					<input type="text" id="memo" name="memo">
+					<input type="button" value="submit" data-theme="b">
+				</form>
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script>
+			$('#add-form').submit(function(e){
+				e.preventDefault();
+				return false;
+			});
+		</script>
+	</body>
+</html>
