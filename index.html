@@ -70,13 +70,34 @@
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
 						<li><a href="#home" data-icon="home" data-direction="reverse">Home</a></li>
-						<li><a href="#graph" data-icon="grid" data-direction="reverse">Table</a></li>
-						<li><a href="#setting" data-icon="gear" class="ui-btn-active">Graph</a></li>
+						<li><a href="#graph" data-icon="grid" data-direction="reverse">Graph</a></li>
+						<li><a href="#setting" data-icon="gear" class="ui-btn-active">Setting</a></li>
 					</ul>
 				</div>
 				<a href="add.html" data-icon="plus" class="ui-btn-right" data-rel="dialog" data-transition="pop">add</a>
 			</div>
 			<div data-role="content">
+				<form>
+					<label for="select-head-of-month">Month starts from:</label>
+					<select name="select-head-of-month" id="select-head-of-month">
+						<option value="1">1st day</option>
+						<option value="5">5th day</option>
+						<option value="10">10th day</option>
+						<option value="15">15th day</option>
+						<option value="20">20th day</option>
+						<option value="25">25th day</option>
+					</select>
+					<label for="select-head-of-week">Week starts from:</label>
+					<select name="select-head-of-week" id="select-head-of-week">
+						<option value="0">Sunday</option>
+						<option value="1">Monday</option>
+						<option value="2">Tuesday</option>
+						<option value="3">Wednesday</option>
+						<option value="4">Thursday</option>
+						<option value="5">Friday</option>
+						<option value="6">Saturday</option>
+					</select>
+				</form>
 			</div>
 			<div data-role="footer">
 				<h4>copyright&copy; <a href="http://skypencil.jp/">eller86</a> 2012</h4>
