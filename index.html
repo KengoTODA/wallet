@@ -1,110 +1,113 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<meta name="author" content="eller86">
-		<title>wallet mockup</title>
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
-	</head>
-	<body>
-		<div id="home" data-role="page">
-			<div data-role="header">
-				<h1>wallet</h1>
-				<div data-role="navbar" data-iconpos="top">
-					<ul>
-						<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-						<li><a href="#graph" data-icon="grid">Graph</a></li>
-						<li><a href="#setting" data-icon="gear">Setting</a></li>
-					</ul>
-				</div>
-				<a href="add.html" data-icon="plus" class="ui-btn-right" data-rel="dialog" data-transition="pop">add</a>
-			</div>
-			<div data-role="content">
-				<div data-role="collapsible-set">
-					<div data-role="collapsible">
-						<h3>Monthly (35% used)</h3>
-						<ul data-role="listview">
-							<li>Food<p class="ui-li-aside">¥200</p></li>
-							<li>Transport<p class="ui-li-aside">¥50</p></li>
-							<li>Goods<p class="ui-li-aside">¥100</p></li>
-							<li data-theme="b">Total<p class="ui-li-aside">¥350</p></li>
-						</ul>
-					</div>
-					<div data-role="collapsible">
-						<h3>Weekly (80% used)</h3>
-						<ul data-role="listview">
-							<li>Food<p class="ui-li-aside">¥200</p></li>
-							<li>Transport<p class="ui-li-aside">¥50</p></li>
-							<li>Goods<p class="ui-li-aside">¥100</p></li>
-							<li data-theme="b">Total<p class="ui-li-aside">¥350</p></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div data-role="footer">
-				<h4>copyright&copy; <a href="http://skypencil.jp/">eller86</a> 2012</h4>
-			</div>
-		</div>
-		<div id="graph" data-role="page">
-			<div data-role="header">
-				<h1>wallet</h1>
-				<div data-role="navbar" data-iconpos="top">
-					<ul>
-						<li><a href="#home" data-icon="home" data-direction="reverse">Home</a></li>
-						<li><a href="#graph" data-icon="grid" class="ui-btn-active">Graph</a></li>
-						<li><a href="#setting" data-icon="gear">Setting</a></li>
-					</ul>
-				</div>
-				<a href="add.html" data-icon="plus" class="ui-btn-right" data-rel="dialog" data-transition="pop">add</a>
-			</div>
-			<div data-role="content">
-			</div>
-			<div data-role="footer">
-				<h4>copyright&copy; <a href="http://skypencil.jp/">eller86</a> 2012</h4>
-			</div>
-		</div>
-		<div id="setting" data-role="page">
-			<div data-role="header">
-				<h1>wallet</h1>
-				<div data-role="navbar" data-iconpos="top">
-					<ul>
-						<li><a href="#home" data-icon="home" data-direction="reverse">Home</a></li>
-						<li><a href="#graph" data-icon="grid" data-direction="reverse">Graph</a></li>
-						<li><a href="#setting" data-icon="gear" class="ui-btn-active">Setting</a></li>
-					</ul>
-				</div>
-				<a href="add.html" data-icon="plus" class="ui-btn-right" data-rel="dialog" data-transition="pop">add</a>
-			</div>
-			<div data-role="content">
-				<form>
-					<label for="select-head-of-month">Month starts from:</label>
-					<select name="select-head-of-month" id="select-head-of-month">
-						<option value="1">1st day</option>
-						<option value="5">5th day</option>
-						<option value="10">10th day</option>
-						<option value="15">15th day</option>
-						<option value="20">20th day</option>
-						<option value="25">25th day</option>
-					</select>
-					<label for="select-head-of-week">Week starts from:</label>
-					<select name="select-head-of-week" id="select-head-of-week">
-						<option value="0">Sunday</option>
-						<option value="1">Monday</option>
-						<option value="2">Tuesday</option>
-						<option value="3">Wednesday</option>
-						<option value="4">Thursday</option>
-						<option value="5">Friday</option>
-						<option value="6">Saturday</option>
-					</select>
-					<input type="button" value="submit" data-theme="b">
-				</form>
-			</div>
-			<div data-role="footer">
-				<h4>copyright&copy; <a href="http://skypencil.jp/">eller86</a> 2012</h4>
-			</div>
-		</div>
-		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>wallet mockup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">wallet</a>
+          <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> Username
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#log">Log</a></li>
+              <li><a href="#graph">Graph</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1>Welcome to wallet!</h1>
+        <p>Wallet is a web application to support expense management.</p>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <h2>Manage multiple unit</h2>
+          <p>Wallet supports to manage multiple unit with 1 account. Manage Dollar, Japanese Yen and Chinese Yuan at the same time.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Expense management</h2>
+            <p>Add expenses to manage your wallet. Wallet tells you about rest, your pace and problem.</p>
+            <p><a class="btn" id="open-add-expense" href="#">View example &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Wallet sharing</h2>
+          <p>You can share wallet with your partner, child and friends to manage shared money like clube budget.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      <footer><p>copyright &copy; 2012 eller86</p></footer>
+    </div>
+    <div class="modal hide" id="add-expense">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&cross;</button>
+        <h3>Add expense</h3>
+      </div>
+      <div class="modal-body">
+        <p>How much do you use?</p>
+        <form class="well">
+          <label for="expense-type">Type:</label>
+          <select id="expense-type">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Goods</option>
+          </select>
+          <label for="price">Price:</label>
+          <input type="number" id="price">
+          <label for="memo">Memo:</label>
+          <input type="text" id="memo">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+        <a href="#" class="btn btn-primary" data-dismiss="modal">Save</a>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('#open-add-expense').on('click', function(e){
+        $('#add-expense').modal('show');
+        e.preventDefault();
+      });
+    </script>
+  </body>
 </html>
